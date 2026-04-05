@@ -31,10 +31,8 @@ jobs:
            ./workflows/autobuild.sh esp32
       - name: Delete private key
         run: rm private.pem
-      - name: Update nightly release
-        uses: pyTooling/Actions/releaser@v6.7.0
+      - name: Upload Release
+        uses: ncipollo/release-action@v1.12.0
         with:
-          tag: nightly-${{ matrix.refs }}
-          rm: true
+          artifacts: "release.zip,release/*.*"
           token: ${{ secrets.GITHUB_TOKEN }}
-          files: release/*.*
