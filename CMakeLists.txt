@@ -19,8 +19,8 @@ cmake_minimum_required(VERSION 3.13)
 
 option(OPENPGP_TEST_INIT_LEGACY_PIN "Bootstrap legacy PIN/DEK format for migration tests" OFF)
 
-set(USB_VID 0x2E8A)
-set(USB_PID 0x10FF)
+set(USB_VID 0x234b)
+set(USB_PID 0x0000)
 
 if(ESP_PLATFORM)
     set(EXTRA_COMPONENT_DIRS pico-keys-sdk/config/esp32/components src/openpgp)
